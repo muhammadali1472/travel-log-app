@@ -1,11 +1,3 @@
-# Log Entry
+Make to sure to have Node.js and MongoDB installed in your computer.
 
-* Title - Text
-* Description - Text
-* Comments - Text
-* Rating - scale of 1 - 10
-* Image - Text - URL
-* Latitude - Number
-* Longitude - Number
-* Created At - DateTime
-* Updated At - DateTime
+run "npm i" and then run "npm run start" or "npm run dev" to start the server.
