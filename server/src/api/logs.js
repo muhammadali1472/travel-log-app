@@ -26,16 +26,13 @@ router.get('/', async (req, res, next) => {
     const entries = await LogEntry.find();
     res.json(entries);
   } catch (error) {
+    console.log(error)
     next(error);
   }
 });
 
 router.post('/', limiter, async (req, res, next) => {
   try {
-    if (req.get('X-API-KEY') !== API_KEY) {
-      res.status(401);
-      throw new Error('UnAuthorized');
-    }
     const logEntry = new LogEntry(req.body);
     const createdEntry = await logEntry.save();
     res.json(createdEntry);
